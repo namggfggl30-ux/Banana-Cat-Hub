@@ -72,9 +72,25 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-	   loadstring(game:HttpGet("https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"))()
+		loadstring(game:HttpGet("LINK SCRIPT 1"))()
+	end,
+
+	[2] = function()
+		loadstring(game:HttpGet("LINK SCRIPT 2"))()
+	end,
+
+	[3] = function()
+		loadstring(game:HttpGet("LINK SCRIPT 3"))()
+	end,
+
+	[4] = function()
+		loadstring(game:HttpGet("LINK SCRIPT 4"))()
+	end,
+
+	[5] = function()
+		loadstring(game:HttpGet("LINK SCRIPT 5"))()
 	end
-	
+
 }
 -- BUTTONS
 
