@@ -138,8 +138,7 @@ btn.MouseButton1Click:Connect(function()
 	end
 
 end)
-
-
+			
 	btn.BackgroundColor3 = yellow
 	    btn.TextColor3 = black
 
