@@ -72,7 +72,7 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-		loadstring(game:HttpGet("LINK1"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"))()
 	end,
 
 	[2] = function()
