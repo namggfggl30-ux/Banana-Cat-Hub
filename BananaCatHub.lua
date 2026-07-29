@@ -60,7 +60,123 @@ line.Position = UDim2.new(0.5,-75,0,34)
 line.BackgroundColor3 = yellow
 line.BorderSizePixel = 0
 
+local ScriptNames = {
+	[1] = "Banana Cat Hub",
+	[2] = "Banana Cat Kaitun Dungeon",
+	[3] = "Banana Bounty Blox Fruit",
+	[4] = "Banana Cat Kaitun BF",
+	[5] = "Banana Cat Kaitun Levi"
+}
 
+
+local Scripts = {
+
+	[1] = function()
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+		getgenv().Key = "90d02c384281ed5b2a39b480"
+
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"
+		))()
+	end,
+
+
+	[2] = function()
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+		getgenv().Key = "90d02c384281ed5b2a39b480"
+
+		Config = {
+			FarmRings = {""},
+			WhitelistRings = {},
+			WhitelistModifiers = {""},
+			MinGradeToLock = 3,
+			MainAccount = "",
+			Alts = {},
+			Difficulty = "Normal",
+			AutoLoad = true,
+			WebhookUrl = "",
+			WebhookInterval = 300,
+		}
+
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/tmuseAI/bnnc/refs/heads/main/KaitunDungeon.lua"
+		))()
+	end,
+
+
+	[3] = function()
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+		getgenv().Key = "90d02c384281ed5b2a39b480"
+
+		getgenv().config = {
+			team = "Pirates",
+			hpTimeout = 15,
+			targetTimeout = 20,
+			lowHealth = 4000,
+			safeHealth = 4500,
+			blackScreen = false,
+			useSkill = false,
+			equipPaleScarf = false,
+			webhookurl = "",
+			webhookEnable = false,
+			webhookSendMinutes = 5,
+			attackSpeed = 0.001,
+			mode = 1,
+			sea = 3,
+			region = "Singapore",
+			trans = false,
+			bltween = true,
+			bpsit = true,
+		}
+
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/Bountynew.lua"
+		))()
+	end,
+
+
+	[4] = function()
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+		getgenv().Key = "90d02c384281ed5b2a39b480"
+
+		getgenv().SettingFarm = {
+			["Hide UI"] = false,
+			["White Screen"] = false,
+
+			["Get Items"] = {
+				["Saber"] = true,
+				["Godhuman"] = true,
+				["Skull Guitar"] = true,
+				["Mirror Fractal"] = true,
+				["Cursed Dual Katana"] = true,
+				["Upgrade Race V2-V3"] = true,
+				["Auto Pull Lever"] = true,
+				["Shark Anchor"] = true,
+			},
+
+			["Auto Summon Rip Indra"] = true,
+		}
+
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"
+		))()
+	end,
+
+
+	[5] = function()
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+		getgenv().Key = "90d02c384281ed5b2a39b480"
+
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/BananaCat-KaitunLevi.lua"
+		))()
+	end
+}
 
 -- BUTTONS
 
@@ -76,7 +192,7 @@ for i = 1,5 do
 
 	btn.BackgroundColor3 = black
 	btn.BorderSizePixel = 0
-	btn.Text = "Script "..i
+	btn.Text = ScriptNames[i]
 	btn.TextColor3 = yellow
 	btn.TextSize = 14
 	btn.Font = Enum.Font.SourceSansBold
@@ -116,7 +232,7 @@ for i = 1,5 do
 
 	    end
 
-	    btn.Text = "Xong"
+	    btn.Text = "Xong✔"
 	    task.wait(0.5)
 
 	    btn.BackgroundColor3 = black
