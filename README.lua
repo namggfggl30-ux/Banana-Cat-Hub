@@ -133,11 +133,9 @@ btn.MouseButton1Click:Connect(function()
 
 	task.spawn(function()
 
-		if Scripts[currentID] then
-			Scripts[currentID]()
-		end
-
-	end)
+	if Scripts[currentID] then
+		Scripts[currentID]()
+	end
 
 end)
 
