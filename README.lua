@@ -67,35 +67,34 @@ local ScriptNames = {
 	[4] = "Banana Cat Kaitun BF",
 	[5] = "Banana Cat Kaitun Levi"
 }
-
+-- BUTTONS
 
 local Scripts = {
 
 	[1] = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"))()
+		loadstring(game:HttpGet("LINK1"))()
 	end,
 
 	[2] = function()
-		loadstring(game:HttpGet("LINK SCRIPT 2"))()
+		loadstring(game:HttpGet("LINK2"))()
 	end,
 
 	[3] = function()
-		loadstring(game:HttpGet("LINK SCRIPT 3"))()
+		loadstring(game:HttpGet("LINK3"))()
 	end,
 
 	[4] = function()
-		loadstring(game:HttpGet("LINK SCRIPT 4"))()
+		loadstring(game:HttpGet("LINK4"))()
 	end,
 
 	[5] = function()
-		loadstring(game:HttpGet("LINK SCRIPT 5"))()
+		loadstring(game:HttpGet("LINK5"))()
 	end
 
 }
--- BUTTONS
+
 
 for i = 1,5 do
-
 	local id = i
 	local running = false
 
