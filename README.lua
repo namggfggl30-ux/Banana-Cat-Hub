@@ -92,7 +92,6 @@ local Scripts = {
 	end
 
 }
-
 -- BUTTONS
 
 for i = 1,5 do
