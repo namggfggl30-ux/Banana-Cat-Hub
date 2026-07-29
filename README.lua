@@ -150,7 +150,7 @@ for i = 1,5 do
 
 	    btn.BackgroundColor3 = black
 	    btn.TextColor3 = yellow
-	    btn.Text = ScriptNames[id]
+	    btn.Text = ScriptNames[i]
 
 	    running = false
 
