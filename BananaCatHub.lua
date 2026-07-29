@@ -192,7 +192,7 @@ for i = 1,5 do
 
 	btn.BackgroundColor3 = black
 	btn.BorderSizePixel = 0
-	btn.Text = ScriptNames[i]
+	btn.Text = ScriptNames[id]
 	btn.TextColor3 = yellow
 	btn.TextSize = 14
 	btn.Font = Enum.Font.SourceSansBold
@@ -213,14 +213,20 @@ for i = 1,5 do
 
 btn.MouseButton1Click:Connect(function()
 
+	local currentID = id
+
 	if running then return end
 	running = true
 
 	task.spawn(function()
-		Scripts[id]()
+
+		if Scripts[currentID] then
+			Scripts[currentID]()
+		end
+
 	end)
 
-end)
+
 	    btn.BackgroundColor3 = yellow
 	    btn.TextColor3 = black
 
@@ -242,7 +248,7 @@ end)
 
 	    btn.BackgroundColor3 = black
 	    btn.TextColor3 = yellow
-	    btn.Text = ScriptNames[i]
+	    btn.Text = ScriptNames[id]
 
 	    running = false
 
