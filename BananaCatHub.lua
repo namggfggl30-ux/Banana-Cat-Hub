@@ -211,11 +211,16 @@ for i = 1,5 do
 	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
-	btn.MouseButton1Click:Connect(function()
+btn.MouseButton1Click:Connect(function()
 
-	    if running then return end
-	    running = true
+	if running then return end
+	running = true
 
+	task.spawn(function()
+		Scripts[id]()
+	end)
+
+end)
 	    btn.BackgroundColor3 = yellow
 	    btn.TextColor3 = black
 
