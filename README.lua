@@ -90,7 +90,7 @@ for i = 1,5 do
 
 	btn.BackgroundColor3 = black
 	btn.BorderSizePixel = 0
-	btn.Text = ScriptNames[i]
+    btn.Text = ScriptNames[id]
 	btn.TextColor3 = yellow
 	btn.TextSize = 14
 	btn.Font = Enum.Font.SourceSansBold
