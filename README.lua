@@ -131,17 +131,13 @@ btn.MouseButton1Click:Connect(function()
 
 	task.spawn(function()
 
-	if Scripts[id] then
-		local success, err = pcall(function()
+		if Scripts[id] then
 			Scripts[id]()
-		end)
-
-		if not success then
-			warn(err)
 		end
-	end
 
-end)
+	end)
+
+
 	btn.BackgroundColor3 = yellow
 	    btn.TextColor3 = black
 
