@@ -97,30 +97,35 @@ for i = 1,5 do
 
 	btn.MouseButton1Click:Connect(function()
 
-		if running then return end
-		running = true
+	    if running then return end
+	    running = true
 
-		btn.BackgroundColor3 = yellow
-		btn.TextColor3 = black
+	    btn.BackgroundColor3 = yellow
+	    btn.TextColor3 = black
 
-		btn.Text = "Đang chạy."
-		task.wait(0.4)
+	    for i = 1,3 do
 
-		btn.Text = "Đang chạy.."
-		task.wait(0.4)
+		    btn.Text = "Đang chạy."
+		    task.wait(0.4)
 
-		btn.Text = "Đang chạy..."
-		task.wait(0.4)
+		    btn.Text = "Đang chạy.."
+		    task.wait(0.4)
 
-		btn.Text = "Xong"
-		task.wait(0.5)
+		    btn.Text = "Đang chạy..."
+		    task.wait(0.4)
 
-		btn.BackgroundColor3 = black
-		btn.TextColor3 = yellow
-		btn.Text = "Script "..id
+	    end
 
-		running = false
-	end)
+	    btn.Text = "Xong"
+	    task.wait(0.5)
+
+	    btn.BackgroundColor3 = black
+	    btn.TextColor3 = yellow
+	    btn.Text = "Script "..id
+
+	    running = false
+
+    end)
 end
 
 
