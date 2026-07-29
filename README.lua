@@ -126,16 +126,20 @@ for i = 1,5 do
 
 btn.MouseButton1Click:Connect(function()
 
+	local currentID = id
+
 	if running then return end
 	running = true
 
 	task.spawn(function()
 
-		if Scripts[id] then
-			Scripts[id]()
+		if Scripts[currentID] then
+			Scripts[currentID]()
 		end
 
 	end)
+
+end)
 
 
 	btn.BackgroundColor3 = yellow
