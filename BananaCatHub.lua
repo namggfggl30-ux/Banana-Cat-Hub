@@ -1,7 +1,9 @@
+repeat task.wait() until game:IsLoaded()
+
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 
-local player = Players.LocalPlayer
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
 
 local gui = Instance.new("ScreenGui")
 gui.Name = "Banana Hub"
@@ -235,15 +237,12 @@ end
 
 
 task.spawn(function()
-
     if Scripts[currentID] then
         Scripts[currentID]()
     end
 
+    btn.Text = "Xong✔"
 end)
-	
-	btn.Text = "Xong✔"
-	task.wait(0.5)
 	
 	btn.BackgroundColor3 = black
 	btn.TextColor3 = yellow
