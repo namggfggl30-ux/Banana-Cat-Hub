@@ -223,25 +223,24 @@ btn.MouseButton1Click:Connect(function()
 	btn.TextColor3 = black
 	
 	for i = 1,3 do
-	
-		btn.Text = "Đang chạy."
-		task.wait(0.4)
-	
-		btn.Text = "Đang chạy.."
-		task.wait(0.4)
-	
-		btn.Text = "Đang chạy..."
-		task.wait(0.4)
-	
-	end
-	
-	task.spawn(function()
-	
-		if Scripts[currentID] then
-			Scripts[currentID]()
-		end
-	
-	end)
+    btn.Text = "Đang chạy."
+    task.wait(0.4)
+
+    btn.Text = "Đang chạy.."
+    task.wait(0.4)
+
+    btn.Text = "Đang chạy..."
+    task.wait(0.4)
+end
+
+
+task.spawn(function()
+
+    if Scripts[currentID] then
+        Scripts[currentID]()
+    end
+
+end)
 	
 	btn.Text = "Xong✔"
 	task.wait(0.5)
