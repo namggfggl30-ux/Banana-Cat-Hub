@@ -1,4 +1,6 @@
-repeat task.wait() until game:IsLoaded()
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
 
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -220,7 +222,7 @@ btn.MouseButton1Click:Connect(function()
 	btn.BackgroundColor3 = yellow
 	btn.TextColor3 = black
 
-for i = 1,3 do
+	for i = 1,3 do
 	btn.Text = "Đang chạy."
 	task.wait(0.4)
 	
@@ -234,18 +236,16 @@ end
 btn.Text = "Xong"
 	
 task.spawn(function()
+
 	if Scripts[currentID] then
 		Scripts[currentID]()
 	end
-end)
-	
-    task.wait(0.1)
-	
-     btn.BackgroundColor3 = black
-     btn.TextColor3 = yellow
-     btn.Text = ScriptNames[id]
-	
-    running = false
+
+	btn.BackgroundColor3 = black
+	btn.TextColor3 = yellow
+	btn.Text = ScriptNames[id]
+
+	running = false
 
 end)
 
