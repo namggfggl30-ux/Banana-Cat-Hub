@@ -74,7 +74,7 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-    loadstring(game:HttpGet(
+		loadstring(game:HttpGet(
 			"https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"
 		))()
 	end,
@@ -239,16 +239,16 @@ task.spawn(function()
 	end
 end)
 	
-	task.wait(0.1)
+task.wait(0.1)
 	
-	btn.BackgroundColor3 = black
-	btn.TextColor3 = yellow
-	btn.Text = ScriptNames[id]
+btn.BackgroundColor3 = black
+btn.TextColor3 = yellow
+btn.Text = ScriptNames[id]
 	
-	running = false
+running = false
 
-    end)
-end
+end)
+
 
 
 
