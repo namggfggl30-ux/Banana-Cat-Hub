@@ -5,7 +5,11 @@ end
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 
-local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+local player = Players.LocalPlayer
+if not player then
+	Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+	player = Players.LocalPlayer
+end
 
 local gui = Instance.new("ScreenGui")
 gui.Name = "Banana Hub"
@@ -76,7 +80,7 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-		loadstring(game:HttpGet(
+	    loadstring(game:HttpGet(
 			"https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"
 		))()
 	end,
@@ -209,46 +213,46 @@ for i = 1,5 do
 	stroke.Parent = btn
 	stroke.Color = yellow
 	stroke.Thickness = 2
-	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
-btn.MouseButton1Click:Connect(function()
+	btn.MouseButton1Click:Connect(function()
 
-	local currentID = id
+		if running then return end
+		running = true
 
-	if running then return end
-	running = true
+		btn.BackgroundColor3 = yellow
+		btn.TextColor3 = black
 
-	btn.BackgroundColor3 = yellow
-	btn.TextColor3 = black
 
-	for i = 1,3 do
-	btn.Text = "Đang chạy."
-	task.wait(0.4)
-	
-	btn.Text = "Đang chạy.."
-	task.wait(0.4)
-	
-	btn.Text = "Đang chạy..."
-	task.wait(0.4)
+		for n = 1,3 do
+			btn.Text = "Đang chạy."
+			task.wait(0.4)
+
+			btn.Text = "Đang chạy.."
+			task.wait(0.4)
+
+			btn.Text = "Đang chạy..."
+			task.wait(0.4)
+		end
+
+
+		task.spawn(function()
+
+			if Scripts[id] then
+				Scripts[id]()
+			end
+
+			btn.BackgroundColor3 = black
+			btn.TextColor3 = yellow
+			btn.Text = ScriptNames[id]
+
+			running = false
+
+		end)
+
+	end)
+
 end
-	
-btn.Text = "Xong"
-	
-task.spawn(function()
-
-	if Scripts[currentID] then
-		Scripts[currentID]()
-	end
-
-	btn.BackgroundColor3 = black
-	btn.TextColor3 = yellow
-	btn.Text = ScriptNames[id]
-
-	running = false
-
-end)
-
 
 
 
