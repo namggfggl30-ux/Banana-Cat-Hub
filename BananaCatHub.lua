@@ -200,7 +200,7 @@ for i = 1,5 do
 	btn.Text = ScriptNames[id]
 	btn.TextColor3 = yellow
 	btn.TextSize = 14
-	btn.Font = Enum.Font.SourceSansBold
+	btn.Font = Enum.Font.GothamBold
 	btn.AutoButtonColor = false
 
 
