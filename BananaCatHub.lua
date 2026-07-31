@@ -244,7 +244,7 @@ btn.TextStrokeTransparency = 1
 btn.BackgroundColor3 = yellow
 btn.TextColor3 = black
 
-task.wait(0.3)
+task.wait(0.5)
 
 -- trở lại màu ban đầu
 btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
