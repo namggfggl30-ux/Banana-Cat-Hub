@@ -203,7 +203,7 @@ for i = 1,5 do
     btn.TextColor3 = yellow
     btn.TextSize = 14
     btn.Font = Enum.Font.GothamSemibold
-    btn.TextScaled = false
+    btn.TextScaled = true
     btn.TextWrapped = false
 
 -- bỏ bóng chữ gây nhòe
