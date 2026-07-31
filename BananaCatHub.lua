@@ -80,15 +80,14 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-		[1] = function()
 
-			getgenv().Key = "0d02c384281ed5b2a39b480"
-		
-			loadstring(game:HttpGet(https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua
-				"
-			))()
-		
-		end,
+		getgenv().Key = "0d02c384281ed5b2a39b480"
+	
+		loadstring(game:HttpGet(
+			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"
+		))()
+	
+	end,
 
 
 	[2] = function()
