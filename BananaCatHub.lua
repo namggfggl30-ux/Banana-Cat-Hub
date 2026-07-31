@@ -282,8 +282,8 @@ local footer = Instance.new("TextLabel")
 footer.Parent = menu
 
 footer.AnchorPoint = Vector2.new(0.5,1)
-footer.Size = UDim2.new(0,170,0,25) -- KHÔNG dùng 1 nữa
-footer.Position = UDim2.new(0.5,0,1,0)
+footer.Size = UDim2.new(0,170,0,25)
+footer.Position = UDim2.new(0.5,0,0,240)
 
 footer.BackgroundTransparency = 1
 footer.Text = "★ Banana Hub - Enjoy! ★"
