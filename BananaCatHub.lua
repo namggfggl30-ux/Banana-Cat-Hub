@@ -202,7 +202,7 @@ for i = 1,5 do
 -- TEXT FIX SHARP
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
-	btn.TextSize = 13
+	btn.TextSize = 12
     btn.TextScaled = false
     btn.TextWrapped = false
 	btn.ClipsDescendants = true
