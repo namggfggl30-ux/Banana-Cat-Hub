@@ -196,9 +196,9 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,160,0,34)
+	btn.Size = UDim2.new(0,160,0,36)
     btn.AnchorPoint = Vector2.new(0.5,0)
-    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*42)
+    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*44)
 	btn.BackgroundColor3 = Color3.fromRGB(20,20,20)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
