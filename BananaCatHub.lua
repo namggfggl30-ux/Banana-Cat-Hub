@@ -28,7 +28,7 @@ local menu = Instance.new("Frame")
 menu.Parent = gui
 menu.AnchorPoint = Vector2.new(0.5,0.5)
 menu.Position = UDim2.new(0.5,0,0.5,0)
-menu.Size = UDim2.new(0,200,0,270)
+menu.Size = UDim2.new(0,190,0,270)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
@@ -63,8 +63,8 @@ title.Font = Enum.Font.GothamBold
 
 local line = Instance.new("Frame")
 line.Parent = menu
-line.Size = UDim2.new(1,-16,0,2)
-line.Position = UDim2.new(0,8,0,34)
+line.Size = UDim2.new(1,-12,0,2)
+line.Position = UDim2.new(0,6,0,34)
 line.BackgroundColor3 = yellow
 line.BorderSizePixel = 0
 
@@ -197,7 +197,7 @@ for i = 1,5 do
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
 	btn.Size = UDim2.new(0,180,0,32)
-	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*40)
+	btn.Position = UDim2.new(0.5,-90,0,45+(i-1)*40)
 
 	btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
 	btn.BorderSizePixel = 0
@@ -280,7 +280,7 @@ end
 local footer = Instance.new("TextLabel")
 footer.Parent = menu
 footer.Size = UDim2.new(1,0,0,18)
-footer.Position = UDim2.new(0,0,1,-20)
+footer.Position = UDim2.new(0,0,1,-28)
 footer.BackgroundTransparency = 1
 footer.Text = "★ Banana Hub - Enjoy! ★"
 footer.TextColor3 = yellow
