@@ -28,7 +28,7 @@ local menu = Instance.new("Frame")
 menu.Parent = gui
 menu.AnchorPoint = Vector2.new(0.5,0.5)
 menu.Position = UDim2.new(0.5,0,0.5,0)
-menu.Size = UDim2.new(0,200,0,260)
+menu.Size = UDim2.new(0,260,0,360)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
@@ -196,7 +196,7 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,160,0,36)
+	btn.Size = UDim2.new(0,220,0,40)
     btn.AnchorPoint = Vector2.new(0.5,0)
     btn.Position = UDim2.new(0.5,0,0,45+(i-1)*44)
 	btn.BackgroundColor3 = Color3.fromRGB(20,20,20)
