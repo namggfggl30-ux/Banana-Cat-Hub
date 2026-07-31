@@ -209,11 +209,6 @@ for i = 1,5 do
 -- bỏ bóng chữ gây nhòe
 btn.TextStrokeTransparency = 1
 
-local textLimit = Instance.new("UITextSizeConstraint")
-textLimit.Parent = btn
-textLimit.MaxTextSize = 18
-textLimit.MinTextSize = 8
-
 	btn.AutoButtonColor = false
 
 
