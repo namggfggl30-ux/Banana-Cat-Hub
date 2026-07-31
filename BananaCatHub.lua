@@ -221,7 +221,7 @@ btn.TextStrokeTransparency = 1
 	local stroke = Instance.new("UIStroke")
     stroke.Parent = btn
     stroke.Color = Color3.fromRGB(255,221,0)
-    stroke.Thickness = 2
+    stroke.Thickness = 1.2
     stroke.Transparency = 0
     stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
