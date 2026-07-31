@@ -28,7 +28,7 @@ local menu = Instance.new("Frame")
 menu.Parent = gui
 menu.AnchorPoint = Vector2.new(0.5,0.5)
 menu.Position = UDim2.new(0.5,0,0.5,0)
-menu.Size = UDim2.new(0,260,0,360)
+menu.Size = UDim2.new(0,240,0,320)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
@@ -196,9 +196,9 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,220,0,40)
+	btn.Size = UDim2.new(0,180,0,34)
     btn.AnchorPoint = Vector2.new(0.5,0)
-    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*44)
+    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*40)
 	btn.BackgroundColor3 = Color3.fromRGB(20,20,20)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
@@ -206,7 +206,7 @@ for i = 1,5 do
 -- TEXT FIX SHARP
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
-	btn.TextSize = 18
+	btn.TextSize = 14
     btn.TextScaled = false
     btn.TextWrapped = false
 	btn.ClipsDescendants = true
