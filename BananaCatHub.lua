@@ -195,7 +195,7 @@ for i = 1,5 do
 	btn.Size = UDim2.new(0,170,0,32)
 	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*36)
 
-	btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
+	btn.BackgroundColor3 = Color3.fromRGB(10,10,10)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
 
