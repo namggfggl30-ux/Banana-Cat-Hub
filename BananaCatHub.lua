@@ -192,27 +192,47 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,160,0,28)
-	btn.Position = UDim2.new(0.5,-80,0,45+(i-1)*34)
+	btn.Size = UDim2.new(0,170,0,32)
+	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*36)
 
-	btn.BackgroundColor3 = black
+	btn.BackgroundColor3 = Color3.fromRGB(10,10,10)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
+
+	-- TEXT FIX
 	btn.TextColor3 = yellow
-	btn.TextSize = 14
+	btn.TextSize = 13
 	btn.Font = Enum.Font.GothamBold
+	btn.TextScaled = false
+	btn.TextWrapped = true
+
+	-- viền chữ chống nhòe
+	btn.TextStrokeTransparency = 0
+	btn.TextStrokeColor3 = Color3.fromRGB(80,60,0)
+
 	btn.AutoButtonColor = false
 
 
 	local corner = Instance.new("UICorner")
 	corner.Parent = btn
-	corner.CornerRadius = UDim.new(0,7)
+	corner.CornerRadius = UDim.new(0,8)
 
 
+	-- VIỀN VÀNG
 	local stroke = Instance.new("UIStroke")
 	stroke.Parent = btn
 	stroke.Color = yellow
-	stroke.Thickness = 2
+	stroke.Thickness = 1.5
+	stroke.Transparency = 0
+
+
+	btn.MouseEnter:Connect(function()
+		stroke.Thickness = 3
+	end)
+
+	btn.MouseLeave:Connect(function()
+		stroke.Thickness = 1.5
+	end)
 
 
 	btn.MouseButton1Click:Connect(function()
@@ -242,7 +262,7 @@ for i = 1,5 do
 				Scripts[id]()
 			end
 
-			btn.BackgroundColor3 = black
+			btn.BackgroundColor3 = Color3.fromRGB(10,10,10)
 			btn.TextColor3 = yellow
 			btn.Text = ScriptNames[id]
 
