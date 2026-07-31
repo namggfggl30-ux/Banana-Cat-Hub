@@ -201,13 +201,17 @@ for i = 1,5 do
 
 -- TEXT FIX SHARP
     btn.TextColor3 = yellow
-    btn.TextSize = 14
     btn.Font = Enum.Font.GothamSemibold
     btn.TextScaled = true
     btn.TextWrapped = false
 
 -- bỏ bóng chữ gây nhòe
 btn.TextStrokeTransparency = 1
+
+local textLimit = Instance.new("UITextSizeConstraint")
+textLimit.Parent = btn
+textLimit.MaxTextSize = 14
+textLimit.MinTextSize = 10
 
 	btn.AutoButtonColor = false
 
