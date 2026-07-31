@@ -205,6 +205,7 @@ for i = 1,5 do
 	btn.TextSize = 14
     btn.TextScaled = false
     btn.TextWrapped = false
+	btn.ClipsDescendants = true
 
 -- bỏ bóng chữ gây nhòe
 btn.TextStrokeTransparency = 1
