@@ -176,7 +176,7 @@ for i = 1,5 do
 
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
-    btn.TextSize = 12
+    btn.TextSize = 14
     btn.TextScaled = false
     btn.TextWrapped = false
     btn.ClipsDescendants = true
