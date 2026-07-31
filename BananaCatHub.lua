@@ -202,7 +202,7 @@ for i = 1,5 do
 -- TEXT FIX SHARP
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
-    btn.TextScaled = true
+    btn.TextScaled = false
     btn.TextWrapped = false
 
 -- bỏ bóng chữ gây nhòe
