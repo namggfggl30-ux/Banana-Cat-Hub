@@ -192,7 +192,7 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,190,0,32)
+	btn.Size = UDim2.new(0,170,0,32)
 	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*40)
 
 	btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
@@ -202,7 +202,7 @@ for i = 1,5 do
 -- TEXT FIX SHARP
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
-	btn.TextSize = 13
+	btn.TextSize = 14
     btn.TextScaled = false
     btn.TextWrapped = false
 	btn.ClipsDescendants = true
