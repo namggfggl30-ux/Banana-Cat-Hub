@@ -11,7 +11,6 @@ if not player then
     player = Players.LocalPlayer
 end
 
--- GUI
 local gui = Instance.new("ScreenGui")
 gui.Name = "Banana Hub"
 gui.ResetOnSpawn = false
@@ -30,10 +29,12 @@ menu.Size = UDim2.new(0,190,0,260)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
-local mc = Instance.new("UICorner", menu)
+local mc = Instance.new("UICorner")
+mc.Parent = menu
 mc.CornerRadius = UDim.new(0,10)
 
-local ms = Instance.new("UIStroke", menu)
+local ms = Instance.new("UIStroke")
+ms.Parent = menu
 ms.Color = yellow
 ms.Thickness = 2
 
@@ -56,7 +57,6 @@ line.Position = UDim2.new(0,8,0,34)
 line.BackgroundColor3 = yellow
 line.BorderSizePixel = 0
 
--- DATA
 local ScriptNames = {
     [1] = "Banana Cat Hub",
     [2] = "Banana Cat Kaitun Dungeon",
@@ -69,7 +69,9 @@ local Scripts = {
     [1] = function()
         repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
         getgenv().Key = "90d02c384281ed5b2a39b480"
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"
+        ))()
     end,
 
     [2] = function()
@@ -89,7 +91,9 @@ local Scripts = {
             WebhookInterval = 300,
         }
 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/tmuseAI/bnnc/refs/heads/main/KaitunDungeon.lua"))()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/tmuseAI/bnnc/refs/heads/main/KaitunDungeon.lua"
+        ))()
     end,
 
     [3] = function()
@@ -117,7 +121,9 @@ local Scripts = {
             bpsit = true,
         }
 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/Bountynew.lua"))()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/Bountynew.lua"
+        ))()
     end,
 
     [4] = function()
@@ -140,19 +146,23 @@ local Scripts = {
             ["Auto Summon Rip Indra"] = true,
         }
 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"))()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"
+        ))()
     end,
 
     [5] = function()
         repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
         getgenv().Key = "90d02c384281ed5b2a39b480"
 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/BananaCat-KaitunLevi.lua"))()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/BananaCat-KaitunLevi.lua"
+        ))()
     end
 }
 
 -- BUTTONS
-for i = 1, 5 do
+for i = 1,5 do
     local id = i
     local running = false
 
@@ -163,18 +173,26 @@ for i = 1, 5 do
     btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
     btn.BorderSizePixel = 0
     btn.Text = ScriptNames[id]
+
     btn.TextColor3 = yellow
     btn.Font = Enum.Font.GothamSemibold
     btn.TextSize = 12
+    btn.TextScaled = false
+    btn.TextWrapped = false
     btn.ClipsDescendants = true
     btn.TextStrokeTransparency = 1
     btn.AutoButtonColor = false
 
-    Instance.new("UICorner", btn).CornerRadius = UDim.new(0,8)
+    local corner = Instance.new("UICorner")
+    corner.Parent = btn
+    corner.CornerRadius = UDim.new(0,8)
 
-    local stroke = Instance.new("UIStroke", btn)
-    stroke.Color = yellow
+    local stroke = Instance.new("UIStroke")
+    stroke.Parent = btn
+    stroke.Color = Color3.fromRGB(255,221,0)
     stroke.Thickness = 1
+    stroke.Transparency = 0
+    stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
     btn.MouseEnter:Connect(function()
         stroke.Thickness = 3
@@ -190,6 +208,7 @@ for i = 1, 5 do
 
         btn.BackgroundColor3 = yellow
         btn.TextColor3 = black
+
         task.wait(0.5)
 
         btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
@@ -201,6 +220,7 @@ for i = 1, 5 do
             end
 
             btn.BackgroundColor3 = Color3.fromRGB(10,10,10)
+            btn.TextColor3 = yellow
             btn.Text = ScriptNames[id]
             running = false
         end)
@@ -227,12 +247,15 @@ toggle.BackgroundColor3 = black
 toggle.Image = "rbxassetid://108388084604425"
 toggle.AutoButtonColor = false
 
-Instance.new("UICorner", toggle)
-local ts = Instance.new("UIStroke", toggle)
+local tc = Instance.new("UICorner")
+tc.Parent = toggle
+
+local ts = Instance.new("UIStroke")
+ts.Parent = toggle
 ts.Color = yellow
 ts.Thickness = 2
 
--- OPEN / CLOSE
+-- OPEN CLOSE
 local open = false
 local busy = false
 
