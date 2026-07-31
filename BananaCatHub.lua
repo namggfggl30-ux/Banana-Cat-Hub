@@ -28,7 +28,7 @@ local menu = Instance.new("Frame")
 menu.Parent = gui
 menu.AnchorPoint = Vector2.new(0.5,0.5)
 menu.Position = UDim2.new(0.5,0,0.5,0)
-menu.Size = UDim2.new(0,190,0,260)
+menu.Size = UDim2.new(0,190,0,270)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
