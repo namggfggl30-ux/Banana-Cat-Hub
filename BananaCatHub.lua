@@ -80,16 +80,8 @@ local ScriptNames = {
 local Scripts = {
 
 	[1] = function()
-
-		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
-	
-		getgenv().Key = "90d02c384281ed5b2a39b480"
-	
-		loadstring(game:HttpGet(
-			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"
-		))()
-	
-	end,
+	print("NUT 1 CHAY")
+end,
 
 
 	[2] = function()
