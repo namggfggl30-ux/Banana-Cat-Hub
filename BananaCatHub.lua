@@ -279,13 +279,13 @@ end
 -- FOOTER
 
 local footer = Instance.new("TextLabel")
-footer.Parent = menu
-footer.Size = UDim2.new(1,0,0,25)
-footer.Position = UDim2.new(0,0,1,-32)
+footer.AnchorPoint = Vector2.new(0.5,1)
+footer.Size = UDim2.new(1,-20,0,25)
+footer.Position = UDim2.new(0.5,0,1,-5)
 footer.BackgroundTransparency = 1
 footer.Text = "★ Banana Hub - Enjoy! ★"
 footer.TextColor3 = yellow
-footer.TextSize = 13
+footer.TextSize = 14
 footer.Font = Enum.Font.GothamSemibold
 
 footer.TextXAlignment = Enum.TextXAlignment.Center
