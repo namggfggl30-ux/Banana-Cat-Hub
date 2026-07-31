@@ -195,20 +195,19 @@ for i = 1,5 do
 	btn.Size = UDim2.new(0,170,0,32)
 	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*36)
 
-	btn.BackgroundColor3 = Color3.fromRGB(10,10,10)
+	btn.BackgroundColor3 = Color3.fromRGB(18,18,18)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
 
-	-- TEXT FIX
-	btn.TextColor3 = yellow
-	btn.TextSize = 13
-	btn.Font = Enum.Font.GothamBold
-	btn.TextScaled = false
-	btn.TextWrapped = true
+-- TEXT FIX SHARP
+    btn.TextColor3 = yellow
+    btn.TextSize = 14
+    btn.Font = Enum.Font.GothamSemibold
+    btn.TextScaled = false
+    btn.TextWrapped = true
 
-	-- viền chữ chống nhòe
-	btn.TextStrokeTransparency = 0
-	btn.TextStrokeColor3 = Color3.fromRGB(80,60,0)
+-- bỏ bóng chữ gây nhòe
+btn.TextStrokeTransparency = 1
 
 	btn.AutoButtonColor = false
 
@@ -220,10 +219,11 @@ for i = 1,5 do
 
 	-- VIỀN VÀNG
 	local stroke = Instance.new("UIStroke")
-	stroke.Parent = btn
-	stroke.Color = yellow
-	stroke.Thickness = 1.5
-	stroke.Transparency = 0
+    stroke.Parent = btn
+    stroke.Color = Color3.fromRGB(255,221,0)
+    stroke.Thickness = 2
+    stroke.Transparency = 0
+    stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 
 	btn.MouseEnter:Connect(function()
