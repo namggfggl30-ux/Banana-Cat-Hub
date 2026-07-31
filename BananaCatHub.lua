@@ -196,7 +196,7 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,170,0,32)
+	btn.Size = UDim2.new(0,180,0,32)
 	btn.Position = UDim2.new(0.5,-85,0,45+(i-1)*40)
 
 	btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
