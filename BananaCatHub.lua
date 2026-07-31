@@ -63,8 +63,8 @@ title.Font = Enum.Font.GothamBold
 
 local line = Instance.new("Frame")
 line.Parent = menu
-line.Size = UDim2.new(0,150,0,2)
-line.Position = UDim2.new(0.5,-75,0,34)
+line.Size = UDim2.new(1,-10,0,2)
+line.Position = UDim2.new(0,5,0,34)
 line.BackgroundColor3 = yellow
 line.BorderSizePixel = 0
 
