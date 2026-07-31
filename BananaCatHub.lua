@@ -240,21 +240,15 @@ btn.TextStrokeTransparency = 1
 		if running then return end
 		running = true
 
-		btn.BackgroundColor3 = yellow
-		btn.TextColor3 = black
+-- hiệu ứng click màu vàng tạm thời
+btn.BackgroundColor3 = yellow
+btn.TextColor3 = black
 
+task.wait(0.3)
 
-		for n = 1,3 do
-			btn.Text = "Đang chạy."
-			task.wait(0.4)
-
-			btn.Text = "Đang chạy.."
-			task.wait(0.4)
-
-			btn.Text = "Đang chạy..."
-			task.wait(0.4)
-		end
-
+-- trở lại màu ban đầu
+btn.BackgroundColor3 = Color3.fromRGB(15,15,15)
+btn.TextColor3 = yellow
 
 		task.spawn(function()
 
