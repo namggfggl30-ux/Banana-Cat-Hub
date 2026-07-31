@@ -28,7 +28,7 @@ local menu = Instance.new("Frame")
 menu.Parent = gui
 menu.AnchorPoint = Vector2.new(0.5,0.5)
 menu.Position = UDim2.new(0.5,0,0.5,0)
-menu.Size = UDim2.new(0,220,0,260)
+menu.Size = UDim2.new(0,220,0,220)
 menu.BackgroundColor3 = black
 menu.Visible = false
 
@@ -196,9 +196,9 @@ for i = 1,5 do
 
 	local btn = Instance.new("TextButton")
 	btn.Parent = menu
-	btn.Size = UDim2.new(0,180,0,34)
+	btn.Size = UDim2.new(0,170,0,30)
     btn.AnchorPoint = Vector2.new(0.5,0)
-    btn.Position = UDim2.new(0.5,0,0,40+(i-1)*38)
+    btn.Position = UDim2.new(0.5,0,0,35+(i-1)*34)
 	btn.BackgroundColor3 = Color3.fromRGB(20,20,20)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
@@ -282,7 +282,7 @@ footer.Parent = menu
 
 footer.AnchorPoint = Vector2.new(0.5,1)
 footer.Size = UDim2.new(0,170,0,25)
-footer.Position = UDim2.new(0.5,0,1,-10)
+footer.Position = UDim2.new(0.5,0,1,-5)
 
 footer.BackgroundTransparency = 1
 footer.Text = "★ Banana Hub - Enjoy! ★"
