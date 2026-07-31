@@ -198,8 +198,7 @@ for i = 1,5 do
 	btn.Parent = menu
 	btn.Size = UDim2.new(0,180,0,34)
     btn.AnchorPoint = Vector2.new(0.5,0)
-    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*42)
-
+    btn.Position = UDim2.new(0.5,0,0,45+(i-1)*36)
 	btn.BackgroundColor3 = Color3.fromRGB(20,20,20)
 	btn.BorderSizePixel = 0
 	btn.Text = ScriptNames[id]
@@ -283,7 +282,7 @@ footer.Parent = menu
 
 footer.AnchorPoint = Vector2.new(0.5,1)
 footer.Size = UDim2.new(0,170,0,25)
-footer.Position = UDim2.new(0.5,0,0,240)
+footer.Position = UDim2.new(0.5,0,1,-5)
 
 footer.BackgroundTransparency = 1
 footer.Text = "★ Banana Hub - Enjoy! ★"
