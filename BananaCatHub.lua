@@ -81,7 +81,9 @@ local Scripts = {
 
 	[1] = function()
 
-		getgenv().Key = "0d02c384281ed5b2a39b480"
+		repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+	
+		getgenv().Key = "90d02c384281ed5b2a39b480"
 	
 		loadstring(game:HttpGet(
 			"https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"
