@@ -210,8 +210,8 @@ btn.TextStrokeTransparency = 1
 
 local textLimit = Instance.new("UITextSizeConstraint")
 textLimit.Parent = btn
-textLimit.MaxTextSize = 22
-textLimit.MinTextSize = 16
+textLimit.MaxTextSize = 20
+textLimit.MinTextSize = 10
 
 	btn.AutoButtonColor = false
 
